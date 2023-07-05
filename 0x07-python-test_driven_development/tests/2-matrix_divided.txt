@@ -1,0 +1,66 @@
+# 2-matrix_divided.txt
+
+2-matrix_divided.py is a python module that defines a function that divides all elements of a matrix. ``matrix_divided(matrix, div)``
+matrix must be a list of lists of ints or floats
+Each row of the matrix must be of the same size
+div must be an int or float but non zero
+
+======
+USAGE:
+======
+
+``matrix_divided(matrix, div)``
+
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    >>> div = 2
+    >>> matrix_divided(matrix, div)
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.5, 4.0, 4.5]]
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    >>> div = 3.5
+    >>> matrix_divided(matrix, div)
+    [[0.29, 0.57, 0.86], [1.14, 1.43, 1.71], [2.0, 2.29, 2.57]]
+
+    >>> matrix = [[1.1, 2.2], [3.3, 4.4], [5.5, 6.6]]
+    >>> div = 1.1
+    >>> matrix_divided(matrix, div)
+    [[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]]
+
+    >>> matrix = [[0]]
+    >>> div = 1
+    >>> matrix_divided(matrix, div)
+    [[0.0]]
+
+    >>> matrix = [[-1, -2, -3], [4, 5, 6], [-7, -8, -9]]
+    >>> div = -2
+    >>> matrix_divided(matrix, div)
+    [[0.5, 1.0, 1.5], [-2.0, -2.5, -3.0], [3.5, 4.0, 4.5]]
+
+    >>> matrix = [[1, 2, 3]]
+    >>> div = 0.5
+    >>> matrix_divided(matrix, div)
+    [[2.0, 4.0, 6.0]]
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    >>> div = 0
+    >>> matrix_divided(matrix, div)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, "nine"]]
+    >>> div = 2
+    >>> matrix_divided(matrix, div)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = [[1, 2, 3], [4, 5], [7, 8, 9]]
+    >>> div = 2
+    >>> matrix_divided(matrix, div)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size

@@ -1,0 +1,92 @@
+# 5-text_indentation.txt
+
+5-text_indentation.py is a python module that defines a function that prints a text with 2 new lines after each of these characters: ., ? and : ``text_indentation(text)``
+text must be a string, otherwise raise a TypeError exception with the message text must be a string
+There should be no space at the beginning or at the end of each printed line
+
+======
+USAGE:
+======
+
+``text_indentation(text)``
+
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hello. How are you?")
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+
+>>> text_indentation("This is a test: testing the function.")
+This is a test:
+<BLANKLINE>
+testing the function.
+<BLANKLINE>
+
+>>> text_indentation("This is a test? Testing the function.")
+This is a test?
+<BLANKLINE>
+Testing the function.
+<BLANKLINE>
+
+>>> text_indentation("This is a test:\nTesting the function.")
+This is a test:
+<BLANKLINE>
+<BLANKLINE>
+Testing the function.
+<BLANKLINE>
+
+>>> text_indentation("Hello world!")
+Hello world!
+
+>>> text_indentation("Hello?\nHow are you?")
+Hello?
+<BLANKLINE>
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+
+>>> text_indentation("This is a test.")
+This is a test.
+<BLANKLINE>
+
+>>> text_indentation("Hello?\n\nHow are you?")
+Hello?
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+
+>>> text_indentation("This is a test..")
+This is a test.
+<BLANKLINE>
+.
+<BLANKLINE>
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation("Hello:\nHow are you?\nFine, thank you.")
+Hello:
+<BLANKLINE>
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+<BLANKLINE>
+Fine, thank you.
+<BLANKLINE>
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation({})
+Traceback (most recent call last):
+...
+TypeError: text must be a string
